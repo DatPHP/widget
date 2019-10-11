@@ -1,6 +1,48 @@
 <?xml version="1.0" ?>
 <widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
-    <widget class="Toptal\CustomWidget\Block\Widget\Samplewidget" id="toptal_customwidget_samplewidget">
+
+
+
+
+    // Announcement
+
+    <widget class="Smartosc\Article\Block\Widget\Announcement" id="smartosc_article_announcement">
+        <label> Announcement Widget</label>
+        <description></description>
+        <parameters>
+            <parameter name="notice1" sort_order="10" visible="true" xsi:type="text">
+                <label>Announcement 1</label>
+            </parameter>
+            <parameter name="notice2" sort_order="10" visible="true" xsi:type="text">
+                <label>Announcement 2</label>
+            </parameter>
+            <parameter name="notice3" sort_order="10" visible="true" xsi:type="text">
+                <label>Announcement 3</label>
+            </parameter>
+
+
+
+
+        </parameters>
+    </widget>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Banner
+
+    <widget class="Smartosc\Article\Block\Widget\Samplewidget" id="toptal_customwidget_samplewidget">
         <label>Dat Widget</label>
         <description></description>
         <parameters>
@@ -12,10 +54,84 @@
             </parameter>
 
 
+            <parameter name="photo1" xsi:type="block" visible="true" sort_order="10">
+                <label translate="true">Photo01</label>
+                <description translate="true">Contact photo</description>
+                <block class="Smartosc\Article\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="photo2" xsi:type="block" visible="true" sort_order="10">
+                <label translate="true">Photo02</label>
+                <description translate="true">Contact photo</description>
+                <block class="Smartosc\Article\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="photo3" xsi:type="block" visible="true" sort_order="10">
+                <label translate="true">Photo03</label>
+                <description translate="true">Contact photo</description>
+                <block class="Smartosc\Article\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+        </parameters>
+    </widget>
 
 
-            <parameter xsi:type="block" name="background_image" visible="true" sort_order="10">
-                <label translate="true">Background Image</label>
+
+
+
+
+    // Third Block under Banner
+
+
+    <widget class="Smartosc\Article\Block\Widget\Third" id="smartosc_article_third">
+        <label>Third Widget</label>
+
+        <description></description>
+        <parameters>
+
+
+            <parameter name="hinh1" xsi:type="block" visible="true" sort_order="10">
+                <label translate="true">Photo 1 </label>
+                <description translate="true">Contact photo</description>
+                <block class="Smartosc\Article\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+
+            <parameter name="hinh2" xsi:type="block" visible="true" sort_order="10">
+                <label translate="true">Photo 2 </label>
+                <description translate="true">Contact photo</description>
+                <block class="Smartosc\Article\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+
+            <parameter name="hinh3" xsi:type="block" visible="true" sort_order="10">
+                <label translate="true">Photo 3 </label>
+                <description translate="true">Contact photo</description>
                 <block class="Smartosc\Article\Block\Adminhtml\Widget\ImageChooser">
                     <data>
                         <item name="button" xsi:type="array">
@@ -26,18 +142,14 @@
             </parameter>
 
 
-
-
-
-
-
-
-
-
         </parameters>
 
-
-
-
     </widget>
+
+
+
+
+
+
+
 </widgets>
